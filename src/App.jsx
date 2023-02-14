@@ -4,6 +4,9 @@
 // import ZustandRequest from "./components/ZustandRequest";
 import CounterWrapper from "./components/Counter/CounterWrapper";
 function App() {
+  const handleAdd = (...args) => {
+    console.log("args", args);
+  };
   return (
     <div className="App">
       {/* <PetContextProvider> */}
@@ -11,7 +14,7 @@ function App() {
       {/* </PetContextProvider> */}
       {/* <ZustandRequest /> */}
       <CounterWrapper />
-      <CounterWrapper />
+      <CounterWrapper count={99} add={handleAdd} />
       <CounterWrapper />
     </div>
   );
