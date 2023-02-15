@@ -15,31 +15,32 @@ export const PetContextProvider = (props) => {
 
 const Child1 = memo(() => {
   console.log("Child1 render");
-  const { dogs } = useContext(PetContext);
+  const { dogs, setDogs } = useContext(PetContext);
   return (
     <>
       <h3> Child1 - {dogs}</h3>
+      <button onClick={() => setDogs(dogs + 1)}>dog +</button>
     </>
   );
 });
 const Child2 = memo(() => {
   console.log("Child2 render");
-  const { cats } = useContext(PetContext);
+  const { cats, setCats } = useContext(PetContext);
   return (
     <>
       <h3> Child2 - {cats}</h3>
+      <button onClick={() => setCats(cats + 1)}>cats +</button>
     </>
   );
 });
 
 export const Container = () => {
-  const { setDogs, setCats, dogs, cats } = useContext(PetContext);
   return (
     <>
-      <Child1 />
-      <Child2 />
-      <button onClick={() => setDogs(dogs + 1)}>dog +</button>
-      <button onClick={() => setCats(cats + 1)}>cat +</button>
+      <PetContextProvider>
+        <Child1 />
+        <Child2 />
+      </PetContextProvider>
     </>
   );
 };

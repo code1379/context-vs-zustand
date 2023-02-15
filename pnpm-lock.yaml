@@ -10,6 +10,8 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-redux: ^8.0.5
+  scheduler: ^0.23.0
+  use-context-selector: ^1.4.1
   vite: ^4.1.0
   zustand: ^4.3.3
 
@@ -20,6 +22,8 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.5_2947d2b8598df18f9b09806c6b0a0b0c
+  scheduler: 0.23.0
+  use-context-selector: 1.4.1_d4b2901fd089c7e2c74a347dc7f1e933
   zustand: 4.3.3_react@18.2.0
 
 devDependencies:
@@ -1044,6 +1048,24 @@ packages:
       escalade: 3.1.1
       picocolors: 1.0.0
     dev: true
+
+  /use-context-selector/1.4.1_d4b2901fd089c7e2c74a347dc7f1e933:
+    resolution: {integrity: sha512-Io2ArvcRO+6MWIhkdfMFt+WKQX+Vb++W8DS2l03z/Vw/rz3BclKpM0ynr4LYGyU85Eke+Yx5oIhTY++QR0ZDoA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '*'
+      react-native: '*'
+      scheduler: '>=0.19.0'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      scheduler: 0.23.0
+    dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
