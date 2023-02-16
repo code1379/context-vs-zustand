@@ -5,10 +5,13 @@
 // import CounterWrapper from "./components/Counter/CounterWrapper";
 // import { Container } from "./components/ContextSelectorContainer";
 import { Container } from "./components/ContextArray";
+import ZustandMultiple from "./components/ZustandMultiple/ZustandMultiple";
+
 function App() {
   return (
     <div className="App">
       <Container />
+      <ZustandMultiple />
       {/* <ZustandRequest /> */}
       {/* <CounterWrapper />
       <CounterWrapper count={99} add={handleAdd} />
